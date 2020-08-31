@@ -139,8 +139,11 @@ const separate = arr => {
   return newArr;
 }
 
-// O() time
-// O() space
-const isAlt = () => {
-  
+// O(n) time
+// O(1) space
+const isAlt = str => {
+  for (let i = 0; i < str.length - 1; i++) {
+    if ('aeiou'.includes(str[i]) === 'aeiou'.includes(str[i + 1])) return false;
+  }
+  return true;
 }
